@@ -1,0 +1,135 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--Very-Light-Gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin: 2% auto 0;
+    text-align: center;
+    width: 34rem
+}
+
+header p:first-child {
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+header p:nth-child(2) {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+
+header p:last-child {
+    margin-top: 1rem;
+    color: var(--Grayish-Blue);
+}
+
+section{
+    margin: 2rem 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.card {
+    width: 25rem;
+    height: 17rem;
+    margin: 2rem 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ddd;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card p:first-child {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 1rem;
+}
+
+.card p:nth-child(2) {
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+}
+
+.card1 {
+    border-top: 5px solid var(--Cyan);
+}
+
+.card2 {
+    border-top: 5px solid var(--Red);
+}
+
+.card3 {
+    border-top: 5px solid var(--Orange);
+}
+
+.card4 {
+    border-top: 5px solid var(--Blue);
+}
+
+.card img {
+    position: absolute;
+    right: 10%;
+    bottom: 10%
+}
+
+.card:not(.card2):not(.card3) {
+    margin-top: 13rem;
+}
+
+@media (max-width: 1399px) {
+    body {
+        margin: 5% 0;
+    }
+    header p:first-child {
+        font-size: 2rem;
+    }
+    header p:nth-child(2) {
+        font-size: 2rem;
+    }
+    header p:last-child {
+        font-size: 15px;
+    }
+    section {
+        grid-template-columns: 1fr;
+        margin: 2rem;
+        max-width: 70%;
+        place-items: center;
+    }
+    .card {
+        margin: 1rem;
+    }
+    .card:not(.card2):not(.card3) {
+        margin: 1rem;
+    }
+    .vertical .card2 {
+        margin-bottom: 2rem;
+    }
+
+}
